@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "joinMax": "30",
+      "clicks": 254,
+      "content": "小分队随时待命，期待你的加入。。",
+      "travelPic": "http://ac-aFkydcqQ.clouddn.com/62b7b86fb4da8469ccdf.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2016-08-11T10:50:00.000Z"
+      },
+      "joinNum": 3,
+      "joinUser": [
+        "57a1f1150a2b58005828c312"
+      ],
+      "title": "夜跑",
+      "releaseUsername": "上实东滩最强跑者挑战赛",
+      "releaseUserId": "57a1f1150a2b58005828c312",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2016-08-10T14:00:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2016-08-11T00:50:00.000Z"
+      },
+      "releaseTime": "2018-09-04 21:00:00",
+      "destination": "江西 南昌 新建县东华理工大学",
+      "objectId": "57a348b7a3413100632099fa",
+      "createdAt": "2016-08-04T13:52:55.273Z",
+      "updatedAt": "2017-04-30T13:43:04.551Z"
+    },
+    {
+      "joinMax": "2",
+      "clicks": 1040,
+      "content": "",
+      "travelPic": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2510201862,1587787407&fm=27&gp=0.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:20:00.000Z"
+      },
+      "joinNum": 13,
+      "joinUser": [
+        "57a47d1fd342d30057533d9d"
+      ],
+      "title": "美丽江西",
+      "releaseUsername": "2018江西马拉松线上跑",
+      "releaseUserId": "57a1f1150a2b58005828c312",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:20:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:20:00.000Z"
+      },
+      "releaseTime": "2018-03-05 08:20:00",
+      "destination": "北京 北京市 东城区 ",
+      "objectId": "57a49299d342d30057540b61",
+      "createdAt": "2016-08-05T13:20:25.872Z",
+      "updatedAt": "2017-04-30T14:34:16.823Z"
+    },
+    {
+      "joinMax": "1",
+      "clicks": 910,
+      "content": "",
+      "travelPic": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515065679542&di=20826f146cad5b9fb7b0aab2a7a30279&imgtype=0&src=http%3A%2F%2Fpic8.nipic.com%2F20100724%2F5144728_005104718877_2.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:18:00.000Z"
+      },
+      "joinNum": 25,
+      "joinUser": [
+        "5836c4ea67f3560065f52b5d"
+      ],
+      "title": "商学院马拉松",
+      "releaseUsername": "暨第四届商学院马拉松",
+      "releaseUserId": "57a1f1150a2b58005828c312",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:18:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T13:18:00.000Z"
+      },
+      "releaseTime": "2018-05-05 08:00:00",
+      "destination": "北京 北京市 东城区 ",
+      "objectId": "57a492221532bc0060bc9087",
+      "createdAt": "2016-08-05T13:18:26.717Z",
+      "updatedAt": "2017-04-30T14:34:33.030Z"
+    },
+    {
+      "joinMax": "1",
+      "clicks": 144,
+      "content": "",
+      "travelPic": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3178432796,3283132345&fm=27&gp=0.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "joinNum": 5,
+      "title": "海口马拉松赛",
+      "releaseUsername": "重磅！开启",
+      "releaseUserId": "57a1f1150a2b58005828c312",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "releaseTime": "2018-08-08 08:30:00",
+      "destination": "北京 北京市 东城区 ",
+      "objectId": "57a4879ba633bd00603d0dbd",
+      "createdAt": "2016-08-05T12:33:31.696Z",
+      "updatedAt": "2017-04-29T02:53:40.452Z"
+    },
+    {
+      "joinMax": "1",
+      "clicks": 144,
+      "content": "",
+      "travelPic": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=887250607,4037045376&fm=27&gp=0.jpg",
+      "endTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "joinNum": 5,
+      "title": "半程赛",
+      "releaseUsername": "布拉格马拉松火爆来袭！",
+      "releaseUserId": "57a1f1150a2b58005828c312",
+      "cantJoinTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "beginTime": {
+        "__type": "Date",
+        "iso": "2016-08-05T12:32:00.000Z"
+      },
+      "releaseTime": "2018-11-11 08:30:00",
+      "destination": "北京 北京市 东城区 ",
+      "objectId": "57a4879ba633bd00603d0dbd",
+      "createdAt": "2016-08-05T12:33:31.696Z",
+      "updatedAt": "2017-04-29T02:53:40.452Z"
+    }
+  ],
+  "success": true
+}
