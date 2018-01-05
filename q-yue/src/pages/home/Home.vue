@@ -22,22 +22,24 @@
 		<div class="hotList">
 			<div class="hotHeader"><i class="icon iconHot">&#xe678;</i>热门活动</div>
 			<div class="hot" v-for="(item, index) in data">
-				<router-link :to="{ path: '/walking/'+ item.objectId }">
-					<div class="imgBox">
-						<div class="hotImg"><img :src="item.travelPic"></div>
-						<div class="i-activity p-number">{{item.joinNum}}人报名</div>
-						<div class="i-activity p-free">免费</div>
-						<div class="activity-s p-signup">正在报名</div>
-					</div>
-					<div class="hotBox clearfix">
-						<div class="hotLeft hotTitle">{{item.title}}</div>
-						<div class="hotRight hotSee"><i class="icon">&#xe62a;</i>{{item.clicks}}</div>
-					</div>
-					<div class="hotBox clearfix">
-						<div class="hotLeft hotName">{{item.releaseUsername}}</div>
-						<div class="hotRight hotTime">{{item.releaseTime}}</div>
-					</div>
-				</router-link>
+				<div class="lineBox">
+					<router-link :to="{ path: '/walking/'+ item.objectId }">
+						<div class="imgBox">
+							<div class="hotImg"><img :src="item.travelPic"></div>
+							<div class="i-activity p-number">{{item.joinNum}}人报名</div>
+							<div class="i-activity p-free">免费</div>
+							<div class="activity-s p-signup">正在报名</div>
+						</div>
+						<div class="hotBox clearfix">
+							<div class="hotLeft hotTitle">{{item.title}}</div>
+							<div class="hotRight hotSee"><i class="icon">&#xe62a;</i>{{item.clicks}}</div>
+						</div>
+						<div class="hotBox clearfix">
+							<div class="hotLeft hotName">{{item.releaseUsername}}</div>
+							<div class="hotRight hotTime">{{item.releaseTime}}</div>
+						</div>
+					</router-link>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -81,7 +83,7 @@
 
 	.hotHeader .iconHot{
 		color: #F14343;
-        font-size: px2rem(100px);
+        font-size: px2rem(90px);
         // vertical-align: middle;
         padding-right: px2rem(40px);
         padding-top: px2rem(80px);
@@ -123,7 +125,8 @@
 	}
 
 	#home .homeList li img{
-	    width: px2rem(400px);
+	    width: px2rem(450px);
+	    border-radius: 50%;
 	}
 
 	#home .homeList li span{
@@ -144,7 +147,7 @@
 		line-height: px2rem(200px);
 		padding-left: 10px;
 		padding: 10px 15px;
-		font-size: 20px;
+		font-size: px2rem(80px);
 		margin-top: px2rem(80px);
 		/* font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		    	-webkit-font-smoothing: antialiased; */
@@ -152,13 +155,17 @@
 
 	#home .hot{
 		/*width: 99%;*/
-		border-top: 1px  solid #f1f1f1;
+		// border-top: 1px  solid #f1f1f1;
 		// border-top: 1px  solid #76d49b;
-		// border-bottom: 10px  solid #f1f1f1;
+		// border-bottom: 1px  solid #f1f1f1;
 		padding: px2rem(60px) px2rem(60px);
-		// position: relative;
 		margin-bottom: 10px;
-		margin-top: px2rem(80px);
+		margin-top: px2rem(60px);
+	}
+
+	.lineBox{
+		// border: 1px solid red;
+		border-bottom: 1px  solid #f1f1f1;
 	}
 
 	.hotImg img{

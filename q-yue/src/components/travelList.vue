@@ -49,16 +49,17 @@
     background: #fff;
   }
   .travel-list-head {
-    height: px2rem(160px);
-    line-height: px2rem(160px);
+    height: px2rem(180px);
+    line-height: px2rem(220px);
     display: flex;
     justify-content: space-between;
-    padding: 0 px2rem(20px);
-    border-bottom: 1px solid #f1f1f1;
-    .head-l {
+    padding: 0 px2rem(100px) 0 px2rem(70px);
+    // margin: 0 0 10px;
+  
+    .head-l{
       .icon {
         color: #F14343;
-        font-size: px2rem(40px);
+        font-size: px2rem(80px);
         vertical-align: middle;
         padding-right: 3px;
       }

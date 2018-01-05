@@ -36,7 +36,7 @@
   @import '../assets/css/function';
 
   .travel {
-    padding: px2rem(10px);
+    padding: px2rem(60px);
     font-size: 14px;
     a {
       display: block;

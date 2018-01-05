@@ -162,7 +162,7 @@
 
               this.$store.dispatch('setLoadingState', false);
               this.setUserInfo(res.data.data);
-              this.$router.replace('/home');
+              this.$router.replace('/mine');
             }else {
               alert(res.data)
             }

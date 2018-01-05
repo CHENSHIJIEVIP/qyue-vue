@@ -4,7 +4,7 @@
       <h4 class="title">{{sport.title}}</h4>
       <p class="desc">{{sport.content}}</p>
       <ul>
-        <li class="username">{{sport.releaseUsername}}</li>
+        <!-- <li class="username">{{sport.releaseUsername}}</li> -->
         <li class="datetime">{{sport.releaseTime}}</li>
       </ul>
       <span class="isover">正在报名</span>
@@ -29,7 +29,7 @@
   @import '../assets/css/function';
 
   .panel {
-    margin: px2rem(40px) 0 0;
+    margin: px2rem(60px) 0 0;
     font-size: 14px;
     background: #fff;
 
@@ -48,17 +48,19 @@
         word-wrap: normal;
         word-wrap: break-word;
         word-break: break-all;
+        height: px2rem(150px); 
+        color: #76d49b;
       }
       .desc {
         color: #999;
         font-size: 13px;
-        line-height: 1.5;
         margin: px2rem(10px) 0;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
+        height: px2rem(150px); 
       }
       ul {
         display: flex;
@@ -71,10 +73,11 @@
       .isover {
         position: absolute;
         right: px2rem(20px);
-        top: px2rem(10px);
-        width: px2rem(300px);
-        height: px2rem(100px);
-        line-height: px2rem(100px);
+        top: px2rem(50px);
+        width: px2rem(330px);
+        height: px2rem(130px);
+        line-height: px2rem(130px);
+        border-radius: 10px 0 0 10px;
         background: rgba(0, 125, 255, 0.48);
         text-align: center;
         color: #fff;

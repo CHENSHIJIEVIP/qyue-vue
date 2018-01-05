@@ -24,19 +24,19 @@
 
 		<div class="mainList">
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon01.png"><span>学生认证</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
 			</div>
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon02.png"><span>我的详情</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
 			</div>
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon03.png"><span>消息通知</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
@@ -45,13 +45,13 @@
 
 		<div class="mainList">
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon04.png"><span>邀请好友</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
 			</div>
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon05.png"><span>选择高校</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
@@ -60,13 +60,13 @@
 
 		<div class="mainList whiteSpace lastBottom">
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon06.png"><span>设置</span></div>
 					<div class="listRight"><span></span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
 			</div>
 			<div class="list">
-				<a href="">
+				<a href="#">
 					<div class="listLeft"><img src="../../assets/images/lisIcon07.png"><span>联系客服</span></div>
 					<div class="listRight"><span class="rightPhone">18612368835</span><span></span><span></span><img src="../../assets/images/rightIcon.png" alt="ddd"></div>
 				</a>
@@ -162,7 +162,7 @@
 		width: 100%;
 		// background-color:red;
 		color: #ffffff;
-		font-size: px2rem(150px)
+		font-size: px2rem(130px)
 	}
 
 	.login{

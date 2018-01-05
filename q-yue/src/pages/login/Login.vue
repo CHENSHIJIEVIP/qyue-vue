@@ -36,8 +36,6 @@
 <script>
 import { mapActions } from 'vuex'
 import qs from "qs"
-// import api from '../fetch/api'
-// import * as _ from '../util/tool'
 
 export default {
     data() {
@@ -74,7 +72,7 @@ export default {
               if(res.data.success) {
                 this.$store.dispatch('setLoadingState', false);
                 this.setUserInfo(res.data.data);
-                this.$router.replace('/home')
+                this.$router.replace('/mine')
               }
             })
             .catch(error => {

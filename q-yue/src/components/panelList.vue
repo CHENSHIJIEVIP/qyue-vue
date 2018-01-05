@@ -11,11 +11,9 @@
         </router-link>
       </div>
     </div>
-    <ul>
-      <li v-for="(item,index) in sportsList">
-        <panel :sport="item"></panel>
-      </li>
-    </ul>
+ 
+    <panel v-for="(item,index) in sportsList" :sport="item" :key="index"></panel>
+     
 
   </div>
 
@@ -39,17 +37,17 @@
     margin-top: px2rem(15px);
   }
   .travel-list-head {
-    height: px2rem(200px);
-    line-height: px2rem(200px);
+    height: px2rem(220px);
+    line-height: px2rem(220px);
     display: flex;
     justify-content: space-between;
-    padding: 0 px2rem(20px);
+    padding: 0 px2rem(60px);
     border-bottom: 1px solid #f1f1f1;
     background: #fff;
     .head-l {
       .icon {
         color: #F14343;
-        font-size: px2rem(40px);
+        font-size: px2rem(90px);
         vertical-align: middle;
         padding-right: 3px;
       }

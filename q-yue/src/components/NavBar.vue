@@ -3,8 +3,10 @@
     <!-- <div class="whiteBox"></div> -->
     <div class="navbox">
       <ul>
-        <li v-for="(item,index) in navData" @click="changeColor(index)">
-            <router-link :to="item.path" :class="changeStyle==index?'activeColor':''" >{{item.name}}</router-link>
+        <li v-for="(item,index) in navData">
+            <router-link :to="item.path" :class = "$route.path == item.path ? 'activeColor' : '' " >
+                {{item.name}}
+            </router-link>
         </li>
       </ul>
     </div>
@@ -21,7 +23,7 @@ export default {
         {name:"约行",path:"/walking"},
         {name:"我的",path:"/mine"}
       ],
-      changeStyle:0
+      // changeStyle:0
     }
   },
   methods:{

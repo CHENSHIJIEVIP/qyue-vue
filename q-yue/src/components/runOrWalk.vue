@@ -7,10 +7,8 @@
                 </ul>
             </nav>
             <section class="scroll-list">
-                <!-- <div ></div> -->
                 <div class="travels" v-for="(itemCon,index) in tabContents" v-show="index == num">
-                    <!-- <travel-list :travelLists="travelsList"></travel-list> -->
-                    <div><travel-list :travelLists="travelsList"></travel-list></div>
+                    <travel-list :travelLists="travelsList"></travel-list>
                     <!-- <div v-for="(datas,index) in data">
                         {{datas}}
                     </div> -->
@@ -68,8 +66,8 @@
             top: 40px;
             z-index: 1;
             width: 100%;
-            height: 70px;
-            line-height: 70px;
+            height: px2rem(240px);
+            line-height: px2rem(240px);
             text-align: center;
             background: #fff;
             .nav-bar {
@@ -85,9 +83,9 @@
             }
         }
         .scroll-list {
-            margin-top: 100px;
+            margin-top: px2rem(400px);
             background: #fff;
-            padding: 15px;
+            padding-top: 15px;
         }
     }
 

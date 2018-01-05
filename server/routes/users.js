@@ -50,6 +50,7 @@ router.post("/userLogin", function (req, res) {
     });
     req.on("end", function () {
         var dataObj = query.parse(dataStr);
+        var bol=false;
         fs.readFile(PATH + "login.json", "utf-8", function (err, data) {
             if (err) {
                 return res.send({
@@ -60,6 +61,7 @@ router.post("/userLogin", function (req, res) {
             var userObj = JSON.parse(data);
             for (var i = 0; i < userObj.length; i++) {
                 if (dataObj.username == userObj[i].username && dataObj.password == userObj[i].password) {
+                    bol=true;
                     fs.readFile(PATH + "userInfo.json", "utf-8", function (err, data) {
                         if (err) {
                             return res.send({
@@ -67,23 +69,23 @@ router.post("/userLogin", function (req, res) {
                                 info: "读取文件异常"
                             });
                         }
-                        console.log(dataObj);
+                        // console.log(dataObj);
                         var userInfo = JSON.parse(data);
+                        var userBol=false;
                         for (var j = 0; j < userInfo.length; j++) {
                             if (dataObj.username == userInfo[j].data.username) {
-                                res.send(userInfo[j]);
-                            } else {
-                                res.send("没有这个用户");
+                                userBol=true;
+                                return res.send(userInfo[j]);
                             }
                         }
 
                     });
-                } else {
-                    res.send("用户名或密码错误");
                 }
             }
+            if(!bol){
+                return res.send("用户名或密码错误");
+            }
         });
-
     });
 });
 /*注册*/
@@ -95,7 +97,62 @@ router.post("/userRegist", function (req, res, next) {
     req.on("end", function () {
         var dataObj = query.parse(dataStr);
         console.log(dataObj);
-        fs.readFile(PATH + "userInfo.json", "utf-8", function (err, data) {
+        var bol=false;
+        //版本二
+        fs.readFile(PATH + "login.json", "utf-8", function (err, data) {
+            if (err) {
+                return res.send({
+                    status: 0,
+                    info: "读取文件异常"
+                });
+            }
+            //用户信息数组
+
+            var loginArr = JSON.parse(data);
+            for (var i = 0; i < loginArr.length; i++) {
+                //判断用户名是否注册
+                if (dataObj.username != loginArr[i].username) {
+                    bol=true;
+                    //读取注册文件
+                    fs.readFile(PATH + "userInfo.json", "utf-8", function (err, data) {
+                        var infoArr = JSON.parse(data);
+                        var addInfo = {
+                            data: {
+                                universities: "东理",
+                                sex: "男",
+                                nickname: "哈哈",
+                                username: dataObj.username,
+                                emailVerified: false,
+                                mobilePhoneNumber: dataObj.username,
+                                avatar: "http://ac-aFkydcqQ.clouddn.com/a96b23926358c9999112.jpg",
+                                mobilePhoneVerified: true,
+                                objectId: "5836c4ea67f3560065f52b5d",
+                                createdAt: "2016-11-24T10:46:02.407Z",
+                                updatedAt: "2017-02-21T14:54:27.169Z"
+                            },
+                            success: true
+                        };
+                        infoArr.push(addInfo);
+                        fs.writeFile(PATH + "userInfo.json", JSON.stringify(infoArr), "utf-8", function () {
+                            return res.send(addInfo);
+                        })
+                    });
+                    //用户密码数组
+                    loginArr.push(dataObj);
+                    fs.writeFile(PATH + "login.json", JSON.stringify(loginArr), "utf-8", function () {
+                        console.log("1");
+                        // res.send("1")
+                        return;
+                    });
+                    break;
+                }
+            }
+            if(!bol){
+                return res.send("该账号已存在，请直接登陆");
+            }
+        });
+        //版本1
+        /*fs.readFile(PATH + "userInfo.json", "utf-8", function (err, data) {
             if (err) {
                 return res.send({
                     status: 0,
@@ -104,15 +161,14 @@ router.post("/userRegist", function (req, res, next) {
             }
             //用户信息数组
             var infoArr = JSON.parse(data);
-            console.log(infoArr);
             for (var i = 0; i < infoArr.length; i++) {
                 //判断用户名是否注册
                 if (dataObj.username != infoArr[i].data.username) {
+                    bol=true;
                     //读取注册文件
                     fs.readFile(PATH + "login.json", "utf-8", function (err, data) {
                         //用户密码数组
                         var loginArr = JSON.parse(data);
-                        console.log(loginArr);
                         loginArr.push(dataObj);
                         fs.writeFile(PATH + "login.json", JSON.stringify(loginArr), "utf-8", function () {
                             console.log("1");
@@ -140,12 +196,12 @@ router.post("/userRegist", function (req, res, next) {
                             return res.send(addInfo);
                         })
                     });
-                } else {
-                    return res.send("该账号已存在，请直接登陆");
                 }
             }
-        });
-
+            if(!bol){
+                return res.send("该账号已存在，请直接登陆");
+            }
+        });*/
     });
 });
 // router.get('/', function (req, res, next) {
