@@ -10,7 +10,7 @@
             <div class="circle-3-3 circle-show"></div>
         </div>
         <div class="login-form">
-      <form action="#">
+       <!-- <form action="#" method="post"> -->
         <div class="user-name common-div">
                     <span class="eamil-icon common-icon">
                         <i class="icon">&#xe601;</i>
@@ -23,8 +23,10 @@
                     </span>
           <input type="password" name="password" v-model="password" placeholder="密码" />
         </div>
-        <div class="login-btn" @click="login">登录</div>
-      </form>
+        <!-- <div class="login-btn" @click="login">登录</div> -->
+        <div class="login-btn" @keyup ="change($event)" @click="login" >登录</div>
+        <!-- <button type="submit" class="login-btn" @click="login">登录</button> -->
+      <!-- </form> -->
     </div>
         <div class="forgets">
       <router-link to="">忘记密码?</router-link>
@@ -48,9 +50,10 @@ export default {
         ...mapActions({ setUserInfo: 'setUserInfo' }),
         // 用户登录
         login() {
+            
             if (!this.username || !this.password) {
                 // _.alert('请填写完整')
-                return
+                return true;
             }
             let data = {
                 username: this.username,
@@ -59,14 +62,14 @@ export default {
             //设置加载状态
             this.$store.dispatch('setLoadingState', true);
             this.$http({
-              method: "post",
-              url: "http://localhost:6500/users/userLogin",
-              data:data,
-              headers:{"Content-Type":"application/x-www-form-urlencoded"},
-              transformRequest:[function (data) {
-                data=qs.stringify(data);
-                return data
-              }]
+                method: "post",
+                url: "http://localhost:6500/users/userLogin",
+                data:data,
+                headers:{"Content-Type":"application/x-www-form-urlencoded"},
+                transformRequest:[function (data) {
+                    data=qs.stringify(data);
+                    return data
+                }]
             }).then(res => {
               // console.log(res);
               if(res.data.success) {
@@ -78,6 +81,12 @@ export default {
             .catch(error => {
                 console.log(error)
             });
+        },
+        change:function(ev){
+            // var event = event || window.event
+            if(ev.keyCode == 13){
+                console.log('sdfsdf')
+            }
         }
     }
 }

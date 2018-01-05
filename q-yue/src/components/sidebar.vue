@@ -136,15 +136,25 @@ export default {
         // margin-bottom: 25px;
         .user {
           margin-bottom: 25px;
+          // vertical-align: middle;
+          vertical-align: middle;
+          // border: 1px solid red;
+          height: 50px;
+          line-height:50px;;
+
         img {
             width: px2rem(100px);
             height: px2rem(100px);
             border-radius: 50%;
-            vertical-align: middle;
+            display: inline-block;
+            border: 1px solid red;
+            margin: 6px 0 0 6px;
+            // line-height: inherit;
         }
         span{
             padding-left: px2rem(15px);
             font-size: 22px;
+            line-height: inherit;
         }
       }
       .function{
