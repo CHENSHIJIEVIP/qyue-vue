@@ -104,6 +104,9 @@
           color: #007aff;;
           font-size: px2rem(65px);
         }
+        .time{
+          color: #7e8c8d;
+        }
       }
     }
   }

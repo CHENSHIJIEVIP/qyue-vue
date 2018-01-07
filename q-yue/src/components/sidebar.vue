@@ -49,13 +49,13 @@
             </div>
             <ul class="sidebar_list_ul">
                 <li>
-                  <router-link to="">
+                  <router-link to="/mine/runOrWalk">
                     我的约行
                       <span>+</span>
                   </router-link>
                 </li>
                 <li>
-                  <router-link to="">
+                  <router-link to="/mine/runOrWalk">
                     我的约跑
                       <span>+</span>
                   </router-link>
@@ -147,7 +147,7 @@ export default {
             height: px2rem(100px);
             border-radius: 50%;
             display: inline-block;
-            border: 1px solid red;
+            // border: 1px solid red;
             margin: 6px 0 0 6px;
             // line-height: inherit;
         }
