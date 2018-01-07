@@ -4,7 +4,7 @@
     <div class="navbox">
       <ul>
         <li v-for="(item,index) in navData">
-            <router-link :to="item.path" :class = "$route.path == item.path ? 'activeColor' : '' " >
+            <router-link :to="item.path" :class = "$route.path == item.path ? 'activeColor' : '' ">
                 {{item.name}}
             </router-link>
         </li>
